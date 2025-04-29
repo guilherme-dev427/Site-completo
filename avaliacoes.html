@@ -25,7 +25,9 @@
         <div id="controle-fonte">
             <button onclick="aumentarFonte()">A +</button>
             <button onclick="diminuirFonte()">A -</button>
-            <button onclick="toggleContraste()" id="btn-contraste">Alto Contraste</button>
+            <div id="controle-fonte"></div>
+                <button onclick="ativarContraste()">Ligar Contraste</button>
+                <button onclick="desativarContraste()">Desligar</button>
 
         </div>
     </section>
@@ -38,7 +40,7 @@
 
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget("https://vlibras.gov.br/app");
+        new window.VLibras.Widget(`https://vlibras.gov.br/app`);
     </script>
 
     <h1><span>Avaliações</span> Recentes</h1>

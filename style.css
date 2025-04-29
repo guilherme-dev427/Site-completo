@@ -318,7 +318,7 @@ h1 {
 }
 
 #controle-fonte button {
-    background-color: #ffaa00;
+    background-color: #ffd500;
     color: #fff;
     border: none;
     margin: 2px;
@@ -329,23 +329,4 @@ h1 {
 
 #controle-fonte button:hover {
     background-color: #ff0000;
-}
-
-#btn-contraste {
-    padding: 8px 12px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.alto-contraste {
-    background-color: #000 !important;
-    color: #ff0000 !important;
-}
-
-.alto-contraste,
-.alto-contraste * {
-    color: #ff0000 !important;
 }

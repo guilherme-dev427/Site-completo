@@ -4,21 +4,23 @@ function aumentarFonte() {
         el.style.fontSize = (tamanhoAtual + 5) + "px";
     });
 }
-function diminuirFonte() {
-    document.querySelectorAll("*").forEach(function (el) {
-        const tamanhoAtual = parseFloat(getComputedStyle(el).fontSize);
-        el.style.fontSize = (tamanhoAtual - 5) + "px";
-    });
+function ativarContraste() {
+    document.body.style.filter = "invert(1) hue-rotate(180deg)";
+    localStorage.setItem("contrasteAtivo", "true");
+    document.body.style.backgroundColor = "black";
 }
 
-function toggleContraste() {
-    const body = document.body;
-    const modoAtivo = body.classList.toggle("alto-contraste");
-    localStorage.setItem("modoContraste", modoAtivo ? "ativado" : "desativado");
+function desativarContraste() {
+    document.body.style.filter = "none";
+    localStorage.setItem("contrasteAtivo", "false");
+    document.body.style.backgroundColor = "yellow";
 }
 
-window.onload = function () {
-    if (localStorage.getItem("modoContraste") === "ativado") {
-        document.body.classList.add("alto-contraste");
+window.addEventListener("load", function () {
+    const contrasteAtivo = localStorage.getItem("contrasteAtivo") === "true";
+    if (contrasteAtivo === "true") {
+        ativarContraste();
+    } else {
+        desativarContraste();
     }
-};
+});
