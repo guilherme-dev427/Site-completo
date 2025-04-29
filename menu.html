@@ -17,6 +17,14 @@
 
     <link rel="stylesheet" href="style.css" />
 </head>
+<section>
+    <div id="controle-fonte">
+        <button onclick="aumentarFonte()">A +</button>
+        <button onclick="diminuirFonte()">A -</button>
+        <button onclick="toggleContraste()" id="btn-contraste">Alto Contraste</button>
+
+    </div>
+</section>
 
 <body>
     <section class="menu" id="menu">
@@ -63,6 +71,17 @@
             </div>
         </div>
     </section>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
     <footer class="footer">
         <div class="footer-container">
             <a href="#" class="logo">
@@ -90,5 +109,6 @@
         </div>
     </footer>
 </body>
+<script src="script.js"></script>
 
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós</title>
-   
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
@@ -17,7 +18,27 @@
 
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+    <section>
+        <div id="controle-fonte">
+            <button onclick="aumentarFonte()">A +</button>
+            <button onclick="diminuirFonte()">A -</button>
+            <button onclick="toggleContraste()" id="btn-contraste">Alto Contraste</button>
+
+        </div>
+    </section>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
     <section class="about" id="about">
         <h2 class="title">Sobre <span>Nós</span></h2>
         <div class="row">
@@ -31,7 +52,8 @@
                 <p>Feito com frutas fresquinhas e selecionadas, direto da natureza pro seu copo, perfeito pra espantar o
                     calor, matar a sede e dar aquele gás no dia.</p>
                 <p>Cada copo é preparado com cuidado e atenção pra você ter uma experiência única</p>
-                <p>Fazemos sucos desde 2024, com otimas avalições de clientes, o proprietario é Guilherme Oliveira de Melo com seus 17 anos fazendo sucos simplesmente perfeito.</p>
+                <p>Fazemos sucos desde 2024, com otimas avalições de clientes, o proprietario é Guilherme Oliveira de
+                    Melo com seus 17 anos fazendo sucos simplesmente perfeito.</p>
                 <a href="#" class="btn">Saiba Mais</a>
             </div>
         </div>
@@ -63,4 +85,6 @@
         </div>
     </footer>
 </body>
+<script src="script.js"></script>
+
 </html>

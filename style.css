@@ -299,6 +299,53 @@ img {
 .menu1 {
     width: 20rem;
 }
-h1{
+
+h1 {
     text-align: center;
+}
+
+#controle-fonte {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /*Garante que a div fique acima dos outros elementos*/
+}
+
+#controle-fonte button {
+    background-color: #ffaa00;
+    color: #fff;
+    border: none;
+    margin: 2px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#controle-fonte button:hover {
+    background-color: #ff0000;
+}
+
+#btn-contraste {
+    padding: 8px 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.alto-contraste {
+    background-color: #000 !important;
+    color: #ff0000 !important;
+}
+
+.alto-contraste,
+.alto-contraste * {
+    color: #ff0000 !important;
 }
